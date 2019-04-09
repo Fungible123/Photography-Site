@@ -1,1 +1,267 @@
-@import "../node_modules/bootstrap/scss/bootstrap";
+@import "../../node_modules/bootstrap/scss/bootstrap";
+@import "../../node_modules/bootstrap/scss/variables";
+
+$light: #fff;
+$dark: #000;
+$teal: #02DEEC;
+$orange: #F86901;
+$header: #F1F0EF;
+
+$first-font: 'Playball', Arial, sans-serif;
+$second-font: 'Galdeano', Arial, sans-serif;
+
+/* Gerenal Styling */
+
+body {
+    font-family: $second-font;
+    background: $light;
+    font-size: 15px;
+    line-height: 1.8;
+    font-weight: 500;
+}
+
+li {
+    list-style-type: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+/*  Link Effects for Aside Navigation */
+.circle-effect a {
+    position: relative;
+}
+
+.circle-effect a::before,
+.circle-effect a::after {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 100px;
+	height: 100px;
+	border: 2px solid rgba(255, 255, 255, 0.548);
+	border-radius: 50%;
+	content: '';
+	opacity: 0;
+	transition: transform 0.3s, opacity 0.3s;
+	transform: translateX(-50%) translateY(-50%) scale(0.2);
+}
+
+.circle-effect a::after {
+	width: 90px;
+	height: 90px;
+	border-width: 6px;
+	transform: translateX(-50%) translateY(-50%) scale(0.8);
+}
+
+.circle-effect a:hover::before,
+.circle-effect a:hover::after,
+.circle-effect a:focus::before,
+.circle-effect2 a:focus::after {
+	opacity: 1;	
+	transform: translateX(-50%) translateY(-50%) scale(1);
+}
+/* End Effect */
+
+/*  Link Effects for Footer Navigation */
+.bracket-effect a::before,
+.bracket-effect a::after {
+	display: inline-block;
+	opacity: 0;
+	transition: transform 0.3s, opacity 0.2s;
+}
+
+.bracket-effect a::before {
+	margin-right: 10px;
+	content: '[';
+	transform: translateX(20px);
+}
+
+.bracket-effect a::after {
+	margin-left: 10px;
+	content: ']';
+	transform: translateX(-20px);
+}
+
+.bracket-effect a:hover::before,
+.bracket-effect a:hover::after,
+.bracket-effect a:focus::before,
+.bracket-effect a:focus::after {
+	opacity: 1;
+	transform: translateX(0px);
+}
+/* End Effect */
+
+h1, h3 {
+    font-family: $first-font;
+}
+
+p, h4 {
+    font-family: $second-font;
+}
+
+.alp-homepage {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+
+/* All Aside styling goes here */
+
+#alp-aside {
+    width: 20%;
+    position: fixed;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    overflow-y: hidden;
+    z-index: 1001;
+    background: $teal;
+    padding: 3em 3em 40px 3em;
+    transition: all .5s ease;
+	@include media-breakpoint-up(lg){
+		width: 20%;
+	}
+	@include media-breakpoint-down(md){
+		width: 270px;
+		transform: translateX(-270px);
+	}
+    h1 {
+        font-size: 2.2em;
+        padding-bottom: 20px;
+        a {
+            color: $light;
+        }
+    }
+    img {
+        margin-bottom: 20px;
+    }
+}
+
+#navigation-links ul {
+    padding: 10px;
+    li {
+        margin: 25px 10px;
+        a{
+            color: $light;
+            font-size: 1.5em;
+            text-decoration: none;
+        }
+    }
+}
+
+
+
+/* All Header styling goes here */
+
+/* All Main Page Section styling goes here */
+
+.gallery-page {
+    width: 100%;
+	float: right;
+	transition: all .5s ease;
+	@include media-breakpoint-up(lg){
+		width: 80%;
+	}
+}
+
+.photo-samples {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 280px;
+	display: block;
+	z-index: 0;
+    position: relative;
+	.overlay{
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: -1;
+		background: $black;
+        opacity: 0;
+        transition: .3s ease;
+    }
+    .title {
+        opacity: 0;
+        transition: .3s ease;
+        h3 {
+            color: $light;
+        }
+    }
+    &:hover, &:focus {
+        .overlay{
+			opacity: .5;
+		}
+		.title{
+			opacity: 1;
+		}
+    }
+    
+}
+
+
+    /* Specialties page styling goes here */
+
+    /* About Me page styling goes here */
+
+    /* Contact page styling goes here */
+
+/* All Footer Section styling goes here */
+
+.myfooter {
+    width: 100%;
+	float: right;
+	transition: all .5s ease;
+	@include media-breakpoint-up(lg){
+		width: 80%;
+	}
+    background-color: $orange;
+    .footer-home {
+        padding: 20px;
+        color: $light;
+    }
+    .footer-navigation {
+        padding: 20px;
+        color: $light;
+        ul {
+            padding: 0px;
+            li {
+                margin: 5px 1px;
+                a{
+                    color: $light;
+                    font-size: 1em;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    .footer-follow {
+        padding: 20px;
+        color: $light;
+        .follow-me-links ul {
+            display: flex;
+            flex-direction: row;
+            padding: 10px;
+            li a img {
+                width: 50%;
+                transform: scale(.8);
+                transition: transform .2s;
+                &:hover {
+                    transform: scale(1);
+                }
+            }
+        }
+        .copyright {
+            padding: 50px 10px 10px 10px;
+            font-size: .8em;
+            @include media-breakpoint-down(sm) { 
+                justify-content: center;
+            }
+        }
+    }
+}
