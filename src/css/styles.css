@@ -7130,6 +7130,7 @@ p, h4 {
   #alp-aside img {
     margin-bottom: 20px; }
 
+/* Navigation Menu and Mobile Navigation */
 #navigation-links ul {
   padding: 10px; }
   #navigation-links ul li {
@@ -7138,6 +7139,51 @@ p, h4 {
       color: #fff;
       font-size: 1.5em;
       text-decoration: none; }
+
+.mobile-active {
+  background-color: #02DEEC;
+  border-radius: 50%;
+  position: fixed;
+  left: 20px;
+  top: 20px;
+  z-index: 9999;
+  cursor: pointer;
+  opacity: 1;
+  visibility: hidden;
+  transition: all .5s ease-in; }
+  @media (max-width: 991.98px) {
+    .mobile-active {
+      opacity: 1;
+      visibility: visible; } }
+
+.mobile-nav {
+  visibility: hidden;
+  top: 100px;
+  left: 20px;
+  z-index: 9999;
+  position: fixed;
+  background: #02DEEC;
+  padding: 15px;
+  border-radius: 20px;
+  border: 1px solid white; }
+  .mobile-nav ul {
+    padding: 0px;
+    margin: 10px 0px; }
+    .mobile-nav ul li {
+      padding: 10px; }
+      .mobile-nav ul li a {
+        color: #fff;
+        font-size: 1.5em; }
+  @media (max-width: 991.98px) {
+    .mobile-nav {
+      visibility: hidden;
+      transform: translateY(0%);
+      opacity: 0;
+      transition: all .2s ease-in; }
+      .mobile-nav.open {
+        visibility: visible;
+        transform: translateY(1%);
+        opacity: 1; } }
 
 /* All Header styling goes here */
 /* All Main Page Section styling goes here */
@@ -7149,32 +7195,107 @@ p, h4 {
     .gallery-page {
       width: 80%; } }
 
-.photo-samples {
+.single-image {
   background-repeat: no-repeat;
   background-size: cover;
   height: 280px;
+  width: 100%;
   display: block;
   z-index: 0;
   position: relative; }
-  .photo-samples .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
-    background: #000;
-    opacity: 0;
-    transition: .3s ease; }
-  .photo-samples .title {
-    opacity: 0;
-    transition: .3s ease; }
-    .photo-samples .title h3 {
-      color: #fff; }
-  .photo-samples:hover .overlay, .photo-samples:focus .overlay {
-    opacity: .5; }
-  .photo-samples:hover .title, .photo-samples:focus .title {
-    opacity: 1; }
+
+.photo-samples .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background: #000;
+  opacity: 0;
+  transition: .3s ease; }
+
+.photo-samples .title {
+  position: absolute;
+  top: 40%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  opacity: 0;
+  transition: .3s ease; }
+  .photo-samples .title h3 {
+    color: #fff; }
+
+.photo-samples:hover .overlay, .photo-samples:focus .overlay {
+  opacity: .5;
+  z-index: 1; }
+
+.photo-samples:hover .title, .photo-samples:focus .title {
+  opacity: 1;
+  z-index: 1; }
+
+/* Image Gallery Styling */
+#overlay {
+  background: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+  #overlay img {
+    margin: 0;
+    width: 80%;
+    height: auto;
+    object-fit: contain;
+    padding: 5%; }
+    @media screen and (min-width: 768px) {
+      #overlay img {
+        width: 60%; } }
+    @media screen and (min-width: 1200px) {
+      #overlay img {
+        width: 50%; } }
+
+#nextButton {
+  color: #fff;
+  font-size: 2em;
+  transition: opacity 0.8s; }
+  #nextButton:hover {
+    opacity: 0.7; }
+  @media screen and (min-width: 768px) {
+    #nextButton {
+      font-size: 3em; } }
+
+#prevButton {
+  color: #fff;
+  font-size: 2em;
+  transition: opacity 0.8s; }
+  #prevButton:hover {
+    opacity: 0.7; }
+  @media screen and (min-width: 768px) {
+    #prevButton {
+      font-size: 3em; } }
+
+#exitButton {
+  color: #fff;
+  font-size: 2em;
+  transition: opacity 0.8s;
+  position: absolute;
+  top: 15px;
+  right: 15px; }
+  #exitButton:hover {
+    opacity: 0.7; }
+  @media screen and (min-width: 768px) {
+    #exitButton {
+      font-size: 3em; } }
 
 /* Specialties page styling goes here */
 /* About Me page styling goes here */

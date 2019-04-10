@@ -11,6 +11,10 @@
     <link href="https://fonts.googleapis.com/css?family=Playball" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Galdeano" rel="stylesheet">
 
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/styles.css">
@@ -19,11 +23,20 @@
       
     <div class="alp-homepage">
       <!-- This is the side navigation -->
+      <a href="#" class="toggle-button" alt="mobile button"><img src="images/camera-white.svg" class="mobile-active" alt="camera button"></a>
+      <nav class="mobile-nav">
+        <ul class="circle-effect mobile-clicked text-center">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Specialties</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
       <aside id="alp-aside" class="full-page-height text-center">
         <h1><a href="index.html">Ambient Light Photography</a></h1>
         <img src="images/camera-white.svg" alt="camera logo" width="80" height="80">
         <nav id="navigation-links">
-          <ul class="circle-effect">
+          <ul class="circle-effect mobile-clicked">
             <li><a href="#">Home</a></li>
             <li><a href="#">Specialties</a></li>
             <li><a href="#">About</a></li>
@@ -35,11 +48,12 @@
 
       <!-- This is the main gallery page -->
       <div class="gallery-page">
-        <section>
+        <section id="image-gallery">
           <div class="row no-gutters">
 
-            <div class="col-md-4">
-              <a href="images/hills.jpg" class="photo-samples d-flex justify-content-center align-items-center" style="background-image: url(images/hills.jpg);">
+            <div class="col-md-4 image">
+              <a href="images/hills.jpg" class="photo-samples text-center">
+                <img src="images/hills.jpg" class="single-image d-flex" alt="Landscape">
                 <div class="overlay"></div>
                 <div class="title">
                   <h3>Landscape</h3>
@@ -47,8 +61,9 @@
               </a>
             </div>
 
-            <div class="col-md-4">
-              <a href="images/beach.jpg" class="photo-samples d-flex justify-content-center align-items-center" style="background-image: url(images/beach.jpg);">
+            <div class="col-md-4 image">
+              <a href="images/beach.jpg" class="photo-samples text-center">
+                <img src="images/beach.jpg" class="single-image d-flex" alt="Beach">
                 <div class="overlay"></div>
                 <div class="title">
                   <h3>Beach</h3>
@@ -56,8 +71,9 @@
               </a>
             </div>
 
-            <div class="col-md-4">
-              <a href="images/hilltop1.jpg" class="photo-samples d-flex justify-content-center align-items-center" style="background-image: url(images/hilltop1.jpg);">
+            <div class="col-md-4 image">
+              <a href="images/hilltop1.jpg" class="photo-samples text-center">
+                <img src="images/hilltop1.jpg" class="single-image d-flex" alt="Travel">
                 <div class="overlay"></div>
                 <div class="title">
                   <h3>Travel</h3>
@@ -65,8 +81,9 @@
               </a>
             </div>
 
-            <div class="col-md-4">
-              <a href="images/hilltop2.jpg" class="photo-samples d-flex justify-content-center align-items-center" style="background-image: url(images/hilltop2.jpg);">
+            <div class="col-md-4 image">
+              <a href="images/hilltop2.jpg" class="photo-samples text-center">
+                <img src="images/hilltop2.jpg" class="single-image d-flex" alt="Scenery">
                 <div class="overlay"></div>
                 <div class="title">
                   <h3>Scenery</h3>
@@ -74,8 +91,9 @@
               </a>
             </div>
 
-            <div class="col-md-4">
-              <a href="images/sea.jpg" class="photo-samples d-flex justify-content-center align-items-center" style="background-image: url(images/sea.jpg);">
+            <div class="col-md-4 image">
+              <a href="images/sea.jpg" class="photo-samples text-center">
+                <img src="images/sea.jpg" class="single-image d-flex" alt="Adventure">
                 <div class="overlay"></div>
                 <div class="title">
                   <h3>Adventure</h3>
@@ -83,8 +101,9 @@
               </a>
             </div>
 
-            <div class="col-md-4">
-              <a href="images/sillhouette.jpg" class="photo-samples d-flex justify-content-center align-items-center" style="background-image: url(images/sillhouette.jpg);">
+            <div class="col-md-4 image">
+              <a href="images/sillhouette.jpg" class="photo-samples text-center">
+                <img src="images/sillhouette.jpg" class="single-image d-flex" alt="Urban">
                 <div class="overlay"></div>
                 <div class="title">
                   <h3>Urban</h3>
@@ -92,8 +111,9 @@
               </a>
             </div>
 
-            <div class="col-md-4">
-              <a href="images/travel.jpg" class="photo-samples d-flex justify-content-center align-items-center" style="background-image: url(images/travel.jpg);">
+            <div class="col-md-4 image">
+              <a href="images/travel.jpg" class="photo-samples text-center">
+                <img src="images/travel.jpg" class="single-image d-flex" alt="Tourism">
                 <div class="overlay"></div>
                 <div class="title">
                   <h3>Tourism</h3>
@@ -101,8 +121,9 @@
               </a>
             </div>
 
-            <div class="col-md-4">
-              <a href="images/coron.jpg" class="photo-samples d-flex justify-content-center align-items-center" style="background-image: url(images/coron.jpg);">
+            <div class="col-md-4 image">
+              <a href="images/coron.jpg" class="photo-samples text-center">
+                <img src="images/coron.jpg" class="single-image d-flex" alt="Local">
                 <div class="overlay"></div>
                 <div class="title">
                   <h3>Local</h3>
@@ -110,8 +131,9 @@
               </a>
             </div>
 
-            <div class="col-md-4">
-              <a href="images/dragonfly.jpg" class="photo-samples d-flex justify-content-center align-items-center" style="background-image: url(images/dragonfly.jpg);">
+            <div class="col-md-4 image">
+              <a href="images/dragonfly.jpg" class="photo-samples text-center">
+                <img src="images/dragonfly.jpg" class="single-image d-flex" alt="Nature">
                 <div class="overlay"></div>
                 <div class="title">
                   <h3>Nature</h3>
@@ -119,8 +141,9 @@
               </a>
             </div>
 
-            <div class="col-md-4">
-              <a href="images/flower1.jpg" class="photo-samples d-flex justify-content-center align-items-center" style="background-image: url(images/flower1.jpg);">
+            <div class="col-md-4 image">
+              <a href="images/flower1.jpg" class="photo-samples text-center">
+                <img src="images/flower1.jpg" class="single-image d-flex" alt="Flower">
                 <div class="overlay"></div>
                 <div class="title">
                   <h3>Flower</h3>
@@ -128,8 +151,9 @@
               </a>
             </div>
 
-            <div class="col-md-4">
-              <a href="images/flower2.jpg" class="photo-samples d-flex justify-content-center align-items-center" style="background-image: url(images/flower2.jpg);">
+            <div class="col-md-4 image">
+              <a href="images/flower2.jpg" class="photo-samples text-center">
+                <img src="images/flower2.jpg" class="single-image d-flex" alt="Floral">
                 <div class="overlay"></div>
                 <div class="title">
                   <h3>Floral</h3>
@@ -137,8 +161,9 @@
               </a>
             </div>
 
-            <div class="col-md-4">
-              <a href="images/karitela.jpg" class="photo-samples d-flex justify-content-center align-items-center" style="background-image: url(images/karitela.jpg);">
+            <div class="col-md-4 image">
+              <a href="images/karitela.jpg" class="photo-samples text-center">
+                <img src="images/karitela.jpg" class="single-image d-flex" alt="Cultural">
                 <div class="overlay"></div>
                 <div class="title">
                   <h3>Cultural</h3>
@@ -191,5 +216,6 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>
