@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="en">
+<html class="no-js" lang="en" class="sr">
   <head>
     <title>Photography Site</title>
     <!-- Required meta tags -->
@@ -12,12 +12,18 @@
     <link href="https://fonts.googleapis.com/css?family=Galdeano" rel="stylesheet">
 
     <!-- Font Awesome -->
-
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <!-- Lightbox2 by Lokesh Dhakar -->
+    <link rel="stylesheet" href="css/lightbox.css">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Scroll Reveal by https://scrollrevealjs.org/ -->
+    <script src="js/scrollreveal.min.js"></script>
+
   </head>
   <body>
       
@@ -26,10 +32,10 @@
       <a href="#" class="toggle-button" alt="mobile button"><img src="images/camera-white.svg" class="mobile-active" alt="camera button"></a>
       <nav class="mobile-nav">
         <ul class="circle-effect mobile-clicked text-center">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Specialties</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="specialties.html">Specialties</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
       <aside id="alp-aside" class="full-page-height text-center">
@@ -51,120 +57,108 @@
         <section id="image-gallery">
           <div class="row no-gutters">
 
-            <div class="col-md-4 image">
-              <a href="images/hills.jpg" class="photo-samples text-center">
-                <img src="images/hills.jpg" class="single-image d-flex" alt="Landscape">
+            <div class="col-md-4 image1">
+              <a href="images/hills.jpg" data-lightbox="photography" data-title="Landscape" class="photo-samples d-flex justify-content-center align-items-center" style="background-image: url(images/hills.jpg); background-size: cover;">
                 <div class="overlay"></div>
-                <div class="title">
+                <div class="title text-center">
                   <h3>Landscape</h3>
                 </div>
               </a>
             </div>
 
-            <div class="col-md-4 image">
-              <a href="images/beach.jpg" class="photo-samples text-center">
-                <img src="images/beach.jpg" class="single-image d-flex" alt="Beach">
+            <div class="col-md-4 image2">
+              <a href="images/beach.jpg" data-lightbox="photography" data-title="Beach" class="photo-samples d-flex justify-content-center align-items-center" style="background-image: url(images/beach.jpg); background-size: cover;">
                 <div class="overlay"></div>
-                <div class="title">
+                <div class="title text-center">
                   <h3>Beach</h3>
                 </div>
               </a>
             </div>
 
-            <div class="col-md-4 image">
-              <a href="images/hilltop1.jpg" class="photo-samples text-center">
-                <img src="images/hilltop1.jpg" class="single-image d-flex" alt="Travel">
+            <div class="col-md-4 image3">
+              <a href="images/hilltop1.jpg" data-lightbox="photography" data-title="Travel" class="photo-samples d-flex justify-content-center align-items-center" style="background-image: url(images/hilltop1.jpg); background-size: cover;">
                 <div class="overlay"></div>
-                <div class="title">
+                <div class="title text-center">
                   <h3>Travel</h3>
                 </div>
               </a>
             </div>
 
-            <div class="col-md-4 image">
-              <a href="images/hilltop2.jpg" class="photo-samples text-center">
-                <img src="images/hilltop2.jpg" class="single-image d-flex" alt="Scenery">
+            <div class="col-md-4 image4">
+              <a href="images/hilltop2.jpg" data-lightbox="photography" data-title="Scenery" class="photo-samples d-flex justify-content-center align-items-center" style="background-image: url(images/hilltop2.jpg); background-size: cover;">
                 <div class="overlay"></div>
-                <div class="title">
+                <div class="title text-center">
                   <h3>Scenery</h3>
                 </div>
               </a>
             </div>
 
-            <div class="col-md-4 image">
-              <a href="images/sea.jpg" class="photo-samples text-center">
-                <img src="images/sea.jpg" class="single-image d-flex" alt="Adventure">
+            <div class="col-md-4 image5">
+              <a href="images/sea.jpg" data-lightbox="photography" data-title="Adventure" class="photo-samples d-flex justify-content-center align-items-center" style="background-image: url(images/sea.jpg); background-size: cover;">
                 <div class="overlay"></div>
-                <div class="title">
+                <div class="title text-center">
                   <h3>Adventure</h3>
                 </div>
               </a>
             </div>
 
-            <div class="col-md-4 image">
-              <a href="images/sillhouette.jpg" class="photo-samples text-center">
-                <img src="images/sillhouette.jpg" class="single-image d-flex" alt="Urban">
+            <div class="col-md-4 image6">
+              <a href="images/sillhouette.jpg" data-lightbox="photography" data-title="Urban" class="photo-samples d-flex justify-content-center align-items-center" style="background-image: url(images/sillhouette.jpg); background-size: cover;">
                 <div class="overlay"></div>
-                <div class="title">
+                <div class="title text-center">
                   <h3>Urban</h3>
                 </div>
               </a>
             </div>
 
-            <div class="col-md-4 image">
-              <a href="images/travel.jpg" class="photo-samples text-center">
-                <img src="images/travel.jpg" class="single-image d-flex" alt="Tourism">
+            <div class="col-md-4 image7">
+              <a href="images/travel.jpg" data-lightbox="photography" data-title="Tourism" class="photo-samples d-flex justify-content-center align-items-center" style="background-image: url(images/travel.jpg); background-size: cover;">
                 <div class="overlay"></div>
-                <div class="title">
+                <div class="title text-center">
                   <h3>Tourism</h3>
                 </div>
               </a>
             </div>
 
-            <div class="col-md-4 image">
-              <a href="images/coron.jpg" class="photo-samples text-center">
-                <img src="images/coron.jpg" class="single-image d-flex" alt="Local">
+            <div class="col-md-4 image8">
+              <a href="images/coron.jpg" data-lightbox="photography" data-title="Local" class="photo-samples d-flex justify-content-center align-items-center" style="background-image: url(images/coron.jpg); background-size: cover;">
                 <div class="overlay"></div>
-                <div class="title">
+                <div class="title text-center">
                   <h3>Local</h3>
                 </div>
               </a>
             </div>
 
-            <div class="col-md-4 image">
-              <a href="images/dragonfly.jpg" class="photo-samples text-center">
-                <img src="images/dragonfly.jpg" class="single-image d-flex" alt="Nature">
+            <div class="col-md-4 image9">
+              <a href="images/dragonfly.jpg" data-lightbox="photography" data-title="Nature" class="photo-samples d-flex justify-content-center align-items-center" style="background-image: url(images/dragonfly.jpg); background-size: cover;">
                 <div class="overlay"></div>
-                <div class="title">
+                <div class="title text-center">
                   <h3>Nature</h3>
                 </div>
               </a>
             </div>
 
-            <div class="col-md-4 image">
-              <a href="images/flower1.jpg" class="photo-samples text-center">
-                <img src="images/flower1.jpg" class="single-image d-flex" alt="Flower">
-                <div class="overlay"></div>
+            <div class="col-md-4 image10 load-hidden">
+              <a href="images/flower1.jpg" data-lightbox="photography" data-title="Flower" class="photo-samples d-flex justify-content-center align-items-center" style="background-image: url(images/flower1.jpg); background-size: cover;">
+                <div class="overlay text-center"></div>
                 <div class="title">
                   <h3>Flower</h3>
                 </div>
               </a>
             </div>
 
-            <div class="col-md-4 image">
-              <a href="images/flower2.jpg" class="photo-samples text-center">
-                <img src="images/flower2.jpg" class="single-image d-flex" alt="Floral">
-                <div class="overlay"></div>
+            <div class="col-md-4 image11 load-hidden">
+              <a href="images/flower2.jpg" data-lightbox="photography" data-title="Floral" class="photo-samples d-flex justify-content-center align-items-center" style="background-image: url(images/flower2.jpg); background-size: cover;">
+                <div class="overlay text-center"></div>
                 <div class="title">
                   <h3>Floral</h3>
                 </div>
               </a>
             </div>
 
-            <div class="col-md-4 image">
-              <a href="images/karitela.jpg" class="photo-samples text-center">
-                <img src="images/karitela.jpg" class="single-image d-flex" alt="Cultural">
-                <div class="overlay"></div>
+            <div class="col-md-4 image12 load-hidden">
+              <a href="images/karitela.jpg" data-lightbox="photography" data-title="Cultural" class="photo-samples d-flex justify-content-center align-items-center" style="background-image: url(images/karitela.jpg); background-size: cover;">
+                <div class="overlay text-center"></div>
                 <div class="title">
                   <h3>Cultural</h3>
                 </div>
@@ -215,6 +209,7 @@
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.min.js"></script>
+    <script src="js/lightbox.min.js"></script>  
     <script src="js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
   </body>
