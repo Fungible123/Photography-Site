@@ -209,6 +209,24 @@ p, h4 {
 
 /* All Header styling goes here */
 
+.myheader {
+    width: 100%;
+	float: right;
+    transition: all .5s ease;
+    background-color: $header;
+    .header-container {
+        padding: 30px 20px 30px 20px;
+    }
+	@include media-breakpoint-up(lg){
+		width: 80%;
+    }
+    @include media-breakpoint-down(md) {
+        .header-container {
+            padding-top: 80px;
+        }
+    }
+}
+
 /* All Main Page Section styling goes here */
 
 .gallery-page { 
@@ -266,9 +284,142 @@ html.sr .load-hidden {
 
     /* Specialties page styling goes here */
 
+    .myspecialties {
+        width: 100%;
+        float: right;
+        transition: all .5s ease;
+        @include media-breakpoint-up(lg){
+            width: 80%;
+        }
+    }
+
+    .specialty-image {
+        width: 100%;
+        height: 100%;
+        padding: 50px;
+        .card-images {
+            display: block;
+            height: 280px;
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+        }  
+        @include media-breakpoint-down(sm){
+            width: 100%;
+            padding: 0px;
+        }
+        .text-content {
+            padding: 20px;
+        }
+    }
+   
     /* About Me page styling goes here */
 
+    .aboutme {
+        width: 100%;
+        float: right;
+        transition: all .5s ease;
+        @include media-breakpoint-up(lg){
+            width: 80%;
+        }
+    }
+
+    .my-image {
+        display: block;
+        padding: 50px;
+        .my-own-image {
+            width: 200px;
+            height: 200px;
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            border: $dark 1px solid;
+            border-radius: 20px;
+            box-shadow: $dark 1px 1px 10px 1px;
+        }  
+    }
+
+    .social-icons {
+        display: block;
+        padding: 50px;
+        .social-media {
+            width: 100px;
+            height: 100px;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-color: $teal;
+            border-radius: 20px;
+        }
+    }
+
+    .about-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .otherlinks a {
+        padding: 12px 10px 10px;
+	    color: $dark;
+	    text-shadow: none;
+        position: relative;
+    }
+
+    .otherlinks a::before,
+    .otherlinks a::after {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background: $teal;
+        content: '';
+        transition: transform 0.3s;
+        transform: scale(0.85);
+    }
+
+    .otherlinks a::after {
+        opacity: 0;
+        transition: top 0.3s, opacity 0.3s, transform 0.3s;
+    }
+
+    .otherlinks a:hover::before,
+    .otherlinks a:hover::after,
+    .otherlinks a:focus::before,
+    .otherlinks a:focus::after {
+        transform: scale(1);
+    }
+
+    .otherlinks a:hover::after,
+    .otherlinks a:focus::after {
+        top: 0%;
+        opacity: 1;
+    }
+
     /* Contact page styling goes here */
+
+    .myform {
+        width: 100%;
+        float: right;
+        padding: 60px;
+        transition: all .5s ease;
+        @include media-breakpoint-up(lg){
+            width: 80%;
+        }
+    }
+
+    .form-control {
+        border-color: $orange;
+    }
+
+    .btn {
+        display: block;
+        background-color: $teal;
+        color: $light;
+        width: 47%;
+        margin: 20px auto;
+    }
 
 /* All Footer Section styling goes here */
 
@@ -302,16 +453,24 @@ html.sr .load-hidden {
     .footer-follow {
         padding: 20px;
         color: $light;
-        .follow-me-links ul {
+        display: block;
+        .follow-me-links {
             display: flex;
+            display: -ms-flexbox;
             flex-direction: row;
+            -ms-flex-direction: row;
             padding: 10px;
-            li a img {
-                width: 50%;
+            min-width: 1px;
+            a img {
+                margin: 10px;
+                max-width: 30px;
+                max-height: 30px;
                 transform: scale(.8);
+                -ms-transform: scale(.8);
                 transition: transform .2s;
                 &:hover {
                     transform: scale(1);
+                    -ms-transform: scale(1);
                 }
             }
         }
