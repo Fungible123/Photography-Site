@@ -26,7 +26,7 @@ Published: https://fungible123.github.io/Photography-Site/
 #### jQuery
  - Used jQuery to make the website interactive with animations and effects.
 
-### Difficulties:
+### Remarks:
 
 #### Bootstrap
  - Pretty straightforward to use. You just have to patient with reading the documentation and finding what you need.
